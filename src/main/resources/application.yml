@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hs?characterEncoding=utf-8
+    username: root
+    password: 1234
+  servlet:
+    multipart:
+      max-file-size: 200KB
+      max-request-size: 100MB
+mybatis:
+  type-aliases-package: com.neuedu.prohs.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+logging:
+  level:
+    com.neuedu.prohs.mapper: debug
+
